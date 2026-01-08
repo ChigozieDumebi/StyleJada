@@ -28,7 +28,7 @@ message: document.getElementById('message').value
 };
 
 try {
-// Changed to a relative path so it works when hosted
+    
 const response = await fetch('/api/stylejada-inquiry', {
 method: 'POST',
 headers: { 'Content-Type': 'application/json' },

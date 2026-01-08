@@ -3,7 +3,7 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 5000;
-// This line allows hosting sites to work
+
 
 app.use(express.json());
 app.use(express.static(__dirname,));
@@ -24,7 +24,7 @@ console.log("Inquiry received from:", message);
 res.status(200).send({ message: "Inquiry received!" });
 });
 
-// We add this so the host knows to show your HTML file when the site loads
+
 
 app.listen(PORT, () => {
 console.log(`StyleJada Server running at http://localhost:${PORT}`);
