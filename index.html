@@ -54,10 +54,11 @@ Refining your garments with absolute precision.</p>
 <div class="container">
 <div class="contact-box">
 <h2>Message the Atelier</h2>
-<form id="tailorForm">
-<input type="text" id="name" placeholder="Full Name" required>
-<input type="email" id="email" placeholder="Email Address" required>
-<textarea id="message" rows="4" placeholder="How can StyleJada help you?" required></textarea>
+
+<form id="tailorForm" action="/api/ stylejada-inquiry" method="POST">
+<input type="text" id="name" name="name" placeholder="Full Name" required>
+<input type="email" id="email" name="email" placeholder="Email Address" required>
+<textarea id="message" name="message" rows="4" placeholder="How can StyleJada help you?" required></textarea>
 <button type="submit" class="submit-btn">Send Message</button>
 </form>
 <p id="formResponse" class="hidden"></p>

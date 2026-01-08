@@ -8,13 +8,20 @@ const PORT = process.env.PORT || 5000;
 app.use(express.json());
 app.use(express.static(__dirname,));
 
+
 app.get('/', (req, res) => {
 res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 app.post('/api/stylejada-inquiry', (req, res) => {
-console.log("Inquiry received from:", req.body.name);
-res.status(200).send({ message: "Ọrụ Aka Di Ebube! Bespoke inquiry received!" });
+const name = req.body.name;
+const email = req.body.email;
+const message = req.body.message;
+
+console.log("Inquiry received from:", name);
+console.log("Inquiry received from:", email);
+console.log("Inquiry received from:", message);
+res.status(200).send({ message: "Inquiry received!" });
 });
 
 // We add this so the host knows to show your HTML file when the site loads
